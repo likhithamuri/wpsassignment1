@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>login</title>
+
+<script>
+function teacher()
+{
+  var user=document.teacherform.username.value;
+  var password=document.teacherform.password.value;
+   if( user=="admin" && password=="password")
+	{ 
+	window.location = "teacher1.html";
+	}
+    else{
+		alert("Invalid Credentials");
+	}
+}
+
+function student()
+{
+  var user=document.studentform.username1.value;
+  var password=document.studentform.password1.value;
+   if((user=="user1" && password=="password")|| (user=="user2" && password=="password"))
+      
+	{ 
+	window.location = "teacher1.html";
+	}
+       
+ 
+   else{
+		alert("Invalid Credentials");
+	}
+}
+</script>
+</head>
+<body>
+<h1 align="center">Student task manager</h1>
+
+
+<table border="10" bgcolor="white" border-color="blue" cellspacing="5" cellpadding="5" width="1500" height="700" align="center">
+
+<th>
+<h1>Student login:</h1>
+   <form onsubmit="student()" name="studentform">
+    username:<input type="text" name="username1"><br><br>
+    password:<input type="password" name="password1"><br><br>
+<input type="button" onClick="student()" value="submit">
+   </form></th>
+<th>
+<h1>Teacher login</h1>
+    <form  onsubmit="teacher()" name="teacherform" >
+    username:<input type="text" name="username" ><br><br>
+    password:<input type="password" name="password"><br><br>
+
+<input type="button" onClick="teacher()" value="submit">
+
+   </form></th></tr>
+</table>
+</body>
+</html>
